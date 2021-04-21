@@ -1,0 +1,44 @@
+body{
+    background: #636e72;
+    height: 100%;
+}
+/* Hiding the checkbox */
+#menu{
+    /* visibility: hidden; */
+}
+/* Hamburger */
+label,
+label::before,
+label::after{
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    border-radius: 5px;
+    background: #fff;
+    transition: .6s;
+}
+label{
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -7.5px;
+}
+label::before{
+    content: '';
+    transform: translateY(-30px);
+}
+label::after{
+    content: '';
+    transform: translateY(30px);
+}
+/* animate when checked */
+#menu:checked + label{
+    width: 0px;
+}
+#menu:checked + label::before{
+    transform:rotate(45deg)translate(0px)
+}
+#menu:checked + label::after{
+    transform:rotate(-45deg)translate(0px)
+}
